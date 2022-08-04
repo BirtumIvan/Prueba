@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b_internal_transfer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-03 21:04+0000\n"
+"PO-Revision-Date: 2022-08-03 21:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b_internal_transfer
+#: code:addons/b_internal_transfer/models/inherit_account_payment.py:0
+#, python-format
+msgid ""
+"A second payment has been created: <a href=# data-oe-model=account.payment "
+"data-oe-id=%d>%s</a>"
+msgstr ""
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__counterpart_amount
+msgid "Counterpart Amount"
+msgstr "Importe"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__counterpart_currency_id
+msgid "Counterpart Currency"
+msgstr "Importe"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__counterpart_inbound
+msgid "Counterpart Inbound"
+msgstr ""
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__destination_journal_id
+msgid "Counterpart Journal"
+msgstr "Diario contrapartida"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__customized_type_exchange
+msgid "Customized type exchange"
+msgstr "Tipo de cambio perzonalizado"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__enable_customized_type_exchange
+msgid "Enable customized exchange"
+msgstr "Habilitar tipo de cambio personalizado"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__id
+msgid "ID"
+msgstr ""
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__paired_internal_transfer_payment_id
+msgid "Paired Internal Transfer Payment"
+msgstr ""
+
+#. module: b_internal_transfer
+#: model:ir.model,name:b_internal_transfer.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__show_customized_type_exchange
+msgid "Show Customized Type Exchange"
+msgstr ""
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__show_type_exchange
+msgid "Show Type Exchange"
+msgstr ""
+
+#. module: b_internal_transfer
+#: code:addons/b_internal_transfer/models/inherit_account_payment.py:0
+#, python-format
+msgid ""
+"This payment has been created from <a href=# data-oe-model=account.payment "
+"data-oe-id=%d>%s</a>"
+msgstr ""
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,field_description:b_internal_transfer.field_account_payment__type_exchange
+msgid "Type exchange"
+msgstr "Tipo de cambio"
+
+#. module: b_internal_transfer
+#: model:ir.model.fields,help:b_internal_transfer.field_account_payment__paired_internal_transfer_payment_id
+msgid ""
+"When an internal transfer is posted, a paired payment is created. They are "
+"cross referenced trough this field"
+msgstr ""
