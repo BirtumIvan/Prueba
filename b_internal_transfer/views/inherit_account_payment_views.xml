@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="view_account_payment_form_inherit" model="ir.ui.view">
+    <field name="name">view.account.payment.form.inherit</field>
+    <field name="model">account.payment</field>
+    <field name="inherit_id" ref="account.view_account_payment_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//group [@name='group2']" position="inside">
+          <field name="show_customized_type_exchange" invisible="1"/>
+          <field name="enable_customized_type_exchange" attrs="{'invisible': ['|',('is_internal_transfer', '=', False),('payment_type', '=', 'inbound')]}"/>
+          <field name="customized_type_exchange" attrs="{'invisible': ['|',('enable_customized_type_exchange','=',False),('show_customized_type_exchange','=',False)]}"/>
+          <field name="destination_journal_id" widget="selection" domain="[('type', 'in', ('bank', 'cash'))]" attrs="{'readonly': [('state', '!=', 'draft')],'invisible': ['|',('is_internal_transfer', '=', False),('payment_type', '=', 'inbound')],'required':[('is_internal_transfer', '=', True)]}"/>
+          <label for="counterpart_amount"  attrs="{'invisible': ['|',('is_internal_transfer', '=', False),('payment_type', '=', 'inbound')]}"/>
+          <div name="amount_div" class="o_row">
+            <field name="counterpart_amount" readonly="1" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')],  'invisible': ['|',('is_internal_transfer', '=', False),('payment_type', '=', 'inbound')]}"/>
+            <field name="counterpart_currency_id" options="{'no_create': True, 'no_open': True}" required="1" attrs="{'readonly': [('state', '!=', 'draft')],'invisible': ['|',('is_internal_transfer', '=', False),('payment_type', '=', 'inbound')]}" groups="base.group_multi_currency"/>
+          </div>
+      </xpath>
+      <xpath expr="//group [@name='group3']" position="inside">
+          <field name="show_type_exchange" invisible="1"/>
+          <field name="type_exchange" force_save="1" attrs ="{'invisible': [('show_type_exchange','=', True)]}"/>
+      </xpath>
+    </field>
+  </record>
+</odoo>
